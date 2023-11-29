@@ -45,6 +45,11 @@ public class MarkorContextUtils extends GsContextUtils {
         return thisp();
     }
 
+    public <T extends GsContextUtils> T applyOpenFromHighlightVisibility(final Context context, boolean openFromHighlightEnabled) {
+        setLauncherActivityEnabledFromString(context, "net.gsantner.markor.AliasDocumentProcessText", openFromHighlightEnabled);
+        return thisp();
+    }
+
     public <T extends GsContextUtils> T createLauncherDesktopShortcut(final Context context, final File file) {
         // This is only allowed to call when direct file access is possible!!
         // So basically only for java.io.File Objects. Virtual files, or content://

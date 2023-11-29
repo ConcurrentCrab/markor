@@ -214,6 +214,9 @@ public class SettingsActivity extends MarkorBaseActivity {
             } else if (eq(key, R.string.pref_key__is_launcher_for_special_files_enabled)) {
                 boolean extraLaunchersEnabled = prefs.getBoolean(key, false);
                 new MarkorContextUtils(getActivity()).applySpecialLaunchersVisibility(getActivity(), extraLaunchersEnabled);
+            } else if (eq(key, R.string.pref_key__is_open_from_highlight_enabled)) {
+                boolean openFromHighlightEnabled = prefs.getBoolean(key, true);
+                new MarkorContextUtils(getActivity()).applyOpenFromHighlightVisibility(getActivity(), openFromHighlightEnabled);
             } else if (eq(key, R.string.pref_key__file_description_format)) {
                 try {
                     new SimpleDateFormat(prefs.getString(key, ""), Locale.getDefault());

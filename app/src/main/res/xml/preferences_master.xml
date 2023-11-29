@@ -109,6 +109,12 @@
                 android:title="@string/special_documents" />
             <CheckBoxPreference
                 android:defaultValue="true"
+                android:icon="@drawable/ic_widgets_black_24dp"
+                android:key="@string/pref_key__is_open_from_highlight_enabled"
+                android:title="@string/open_from_highlight"
+                android:summary="@string/open_from_highlight_effect" />
+            <CheckBoxPreference
+                android:defaultValue="true"
                 android:icon="@drawable/ic_border_outer_black_24dp"
                 android:key="@string/pref_key__is_multi_window_enabled"
                 android:summary="@string/open_new_documents_always_in_new_window"
